@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillDroid.in — Cybersecurity Training</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-logo" onclick="showPage('home')">
+    <img src="assets/logo.png" alt="SkillDroid.in"/>
+    <span class="nav-logo-text">Skill<span>Droid</span>.in</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a onclick="showPage('home')"      id="nav-home"      class="active">Home</a></li>
+    <li><a onclick="showPage('courses')"   id="nav-courses">Courses</a></li>
+    <li><a onclick="showPage('roadmap')"   id="nav-roadmap">Roadmap</a></li>
+    <li><a onclick="showPage('blogs')"     id="nav-blogs">Blog</a></li>
+    <li><a onclick="showPage('portfolio')" id="nav-portfolio">Portfolio</a></li>
+    <li><a onclick="showPage('contact')"   id="nav-contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     HOME
+════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <div class="hero">
+    <p class="hero-eyebrow">Cybersecurity Training — Batch 2025</p>
+    <h1 class="hero-heading">
+      Learn cybersecurity<br>
+      the <em>practical</em> way.
+    </h1>
+    <p class="hero-text">
+      SkillDroid.in teaches cybersecurity through hands-on labs and real-world scenarios.
+      We cover ethical hacking, web and network pentesting, SOC operations, API security,
+      and digital forensics — structured for beginners and working professionals.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" onclick="showPage('courses')">View Courses</a>
+      <a class="btn btn-outline" onclick="showPage('roadmap')">Roadmap</a>
+    </div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="500">0</span>
+        <span class="stat-label">Students enrolled</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="6">0</span>
+        <span class="stat-label">Courses available</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="15">0</span>
+        <span class="stat-label">Mentors</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="98">0</span>
+        <span class="stat-label">% satisfaction</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+        <div>
+          <span class="section-label">What we do</span>
+          <h2 class="section-heading">Practical skills,<br>not slide decks.</h2>
+          <p class="section-body" style="margin-bottom:20px;">
+            Most cybersecurity courses are just video lectures. At SkillDroid.in, every topic
+            comes with a lab environment where you practice on real tools — Burp Suite, Metasploit,
+            Nmap, Wireshark, Volatility — the same stack you'd use on the job.
+          </p>
+          <p class="section-body">
+            Our instructors are active security professionals. Not YouTubers, not content creators —
+            people who do this work daily and teach from experience.
+          </p>
+        </div>
+        <div class="why-list">
+          <div class="why-item reveal">
+            <span class="why-num">01</span>
+            <div class="why-title">Hands-on labs with every module</div>
+            <div class="why-desc">Practice on intentionally vulnerable machines, CTF challenges, and simulated environments — no theory-only modules.</div>
+          </div>
+          <div class="why-item reveal">
+            <span class="why-num">02</span>
+            <div class="why-title">Mentorship from practitioners</div>
+            <div class="why-desc">Get guidance from people actively working in pentesting, SOC, and bug bounty — not just course creators.</div>
+          </div>
+          <div class="why-item reveal">
+            <span class="why-num">03</span>
+            <div class="why-title">Curriculum aligned to industry certs</div>
+            <div class="why-desc">Our content maps to CEH, OSCP, eJPT, and CompTIA Security+ so your learning transfers directly to certification prep.</div>
+          </div>
+          <div class="why-item reveal">
+            <span class="why-num">04</span>
+            <div class="why-title">Private community and job support</div>
+            <div class="why-desc">Discord access, resume reviews, mock interviews, and referrals to security teams actively hiring.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid var(--border);">
+    <div class="container">
+      <span class="section-label">Courses</span>
+      <h2 class="section-heading" style="margin-bottom:28px;">What we teach</h2>
+      <div class="teach-grid">
+        <div class="teach-item reveal" onclick="showPage('courses')"><i class="fas fa-user-secret"></i><span>Ethical Hacking</span></div>
+        <div class="teach-item reveal" onclick="showPage('courses')"><i class="fas fa-globe"></i><span>Web Pentesting</span></div>
+        <div class="teach-item reveal" onclick="showPage('courses')"><i class="fas fa-network-wired"></i><span>Network Pentesting</span></div>
+        <div class="teach-item reveal" onclick="showPage('courses')"><i class="fas fa-eye"></i><span>SOC Analysis</span></div>
+        <div class="teach-item reveal" onclick="showPage('courses')"><i class="fas fa-code"></i><span>API Pentesting</span></div>
+        <div class="teach-item reveal" onclick="showPage('courses')"><i class="fas fa-search"></i><span>Digital Forensics</span></div>
+      </div>
+      <div style="margin-top:28px;">
+        <a class="btn btn-outline" onclick="showPage('courses')">See all courses →</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     COURSES
+════════════════════════════════════════ -->
+<div class="page" id="page-courses">
+  <div class="page-top">
+    <span class="section-label">Courses</span>
+    <h1 class="page-title">Available courses</h1>
+    <p class="page-sub">Six cybersecurity domains. Each course includes labs, recorded sessions, mentorship access, and a completion certificate.</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="courses-grid">
+
+        <div class="course-card reveal">
+          <span class="course-domain">Ethical Hacking</span>
+          <span class="course-level">Beginner → Advanced</span>
+          <h3 class="course-name">Ethical Hacking Masterclass</h3>
+          <p class="course-desc">Covers reconnaissance, scanning, exploitation, post-exploitation, and professional reporting. Aligned with CEH objectives.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fas fa-clock"></i> 60+ hrs</div>
+            <div class="course-meta-item"><i class="fas fa-flask"></i> 40 labs</div>
+            <div class="course-meta-item"><i class="fas fa-certificate"></i> Certificate</div>
+          </div>
+          <div class="course-btns">
+            <a href="YOUR_ETHICAL_HACKING_PDF_LINK_HERE" target="_blank" class="btn-details"><i class="fas fa-file-alt"></i> Syllabus</a>
+            <a href="https://wa.me/91YOURNUMBERHERE?text=Hi,%20I'm%20interested%20in%20the%20Ethical%20Hacking%20course." target="_blank" class="btn-access"><i class="fab fa-whatsapp"></i> Enroll</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal">
+          <span class="course-domain">Web Security</span>
+          <span class="course-level">Intermediate</span>
+          <h3 class="course-name">Web Application Pentesting</h3>
+          <p class="course-desc">OWASP Top 10, SQL injection, XSS, CSRF, SSRF, authentication flaws, and broken access controls — all with real application labs.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fas fa-clock"></i> 50+ hrs</div>
+            <div class="course-meta-item"><i class="fas fa-flask"></i> 35 labs</div>
+            <div class="course-meta-item"><i class="fas fa-certificate"></i> Certificate</div>
+          </div>
+          <div class="course-btns">
+            <a href="YOUR_WEB_PENTEST_PDF_LINK_HERE" target="_blank" class="btn-details"><i class="fas fa-file-alt"></i> Syllabus</a>
+            <a href="https://wa.me/91YOURNUMBERHERE?text=Hi,%20I'm%20interested%20in%20the%20Web%20Pentesting%20course." target="_blank" class="btn-access"><i class="fab fa-whatsapp"></i> Enroll</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal">
+          <span class="course-domain">Network Security</span>
+          <span class="course-level">Intermediate</span>
+          <h3 class="course-name">Network Pentesting</h3>
+          <p class="course-desc">Network scanning, MITM attacks, password attacks, Active Directory exploitation, and wireless security testing from scratch.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fas fa-clock"></i> 55+ hrs</div>
+            <div class="course-meta-item"><i class="fas fa-flask"></i> 38 labs</div>
+            <div class="course-meta-item"><i class="fas fa-certificate"></i> Certificate</div>
+          </div>
+          <div class="course-btns">
+            <a href="YOUR_NETWORK_PENTEST_PDF_LINK_HERE" target="_blank" class="btn-details"><i class="fas fa-file-alt"></i> Syllabus</a>
+            <a href="https://wa.me/91YOURNUMBERHERE?text=Hi,%20I'm%20interested%20in%20the%20Network%20Pentesting%20course." target="_blank" class="btn-access"><i class="fab fa-whatsapp"></i> Enroll</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal">
+          <span class="course-domain">Blue Team</span>
+          <span class="course-level">Beginner → Intermediate</span>
+          <h3 class="course-name">SOC Analyst Training</h3>
+          <p class="course-desc">SIEM tools, log analysis, alert triage, threat hunting, and incident response workflow. Prepares you for a Level 1/2 SOC role.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fas fa-clock"></i> 45+ hrs</div>
+            <div class="course-meta-item"><i class="fas fa-flask"></i> 30 labs</div>
+            <div class="course-meta-item"><i class="fas fa-certificate"></i> Certificate</div>
+          </div>
+          <div class="course-btns">
+            <a href="YOUR_SOC_PDF_LINK_HERE" target="_blank" class="btn-details"><i class="fas fa-file-alt"></i> Syllabus</a>
+            <a href="https://wa.me/91YOURNUMBERHERE?text=Hi,%20I'm%20interested%20in%20the%20SOC%20Analyst%20course." target="_blank" class="btn-access"><i class="fab fa-whatsapp"></i> Enroll</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal">
+          <span class="course-domain">API Security</span>
+          <span class="course-level">Advanced</span>
+          <h3 class="course-name">API Pentesting</h3>
+          <p class="course-desc">REST and GraphQL API security, BOLA, BFLA, mass assignment, JWT attacks, and API-specific recon. Uses Postman and Burp Suite.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fas fa-clock"></i> 40+ hrs</div>
+            <div class="course-meta-item"><i class="fas fa-flask"></i> 25 labs</div>
+            <div class="course-meta-item"><i class="fas fa-certificate"></i> Certificate</div>
+          </div>
+          <div class="course-btns">
+            <a href="YOUR_API_PENTEST_PDF_LINK_HERE" target="_blank" class="btn-details"><i class="fas fa-file-alt"></i> Syllabus</a>
+            <a href="https://wa.me/91YOURNUMBERHERE?text=Hi,%20I'm%20interested%20in%20the%20API%20Pentesting%20course." target="_blank" class="btn-access"><i class="fab fa-whatsapp"></i> Enroll</a>
+          </div>
+        </div>
+
+        <div class="course-card reveal">
+          <span class="course-domain">Forensics</span>
+          <span class="course-level">Intermediate</span>
+          <h3 class="course-name">Digital Forensics</h3>
+          <p class="course-desc">Disk imaging, memory analysis with Volatility, network forensics, malware triage, and legal documentation for incident investigations.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fas fa-clock"></i> 48+ hrs</div>
+            <div class="course-meta-item"><i class="fas fa-flask"></i> 32 labs</div>
+            <div class="course-meta-item"><i class="fas fa-certificate"></i> Certificate</div>
+          </div>
+          <div class="course-btns">
+            <a href="YOUR_FORENSICS_PDF_LINK_HERE" target="_blank" class="btn-details"><i class="fas fa-file-alt"></i> Syllabus</a>
+            <a href="https://wa.me/91YOURNUMBERHERE?text=Hi,%20I'm%20interested%20in%20the%20Digital%20Forensics%20course." target="_blank" class="btn-access"><i class="fab fa-whatsapp"></i> Enroll</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     ROADMAP
+════════════════════════════════════════ -->
+<div class="page" id="page-roadmap">
+  <div class="roadmap-page-inner">
+    <span class="section-label">Roadmap</span>
+    <h1 class="page-title" style="margin-bottom:10px;">Cybersecurity roadmap</h1>
+    <p class="page-sub">
+      Not sure where to start or what to learn next? The roadmap breaks down each domain — tools, concepts, and progression path — hosted on GitHub so it stays current.
+    </p>
+    <div class="roadmap-domains">
+      <div class="roadmap-domain"><i class="fas fa-user-secret"></i>Ethical Hacking</div>
+      <div class="roadmap-domain"><i class="fas fa-globe"></i>Web Pentesting</div>
+      <div class="roadmap-domain"><i class="fas fa-network-wired"></i>Network Security</div>
+      <div class="roadmap-domain"><i class="fas fa-eye"></i>SOC / Blue Team</div>
+      <div class="roadmap-domain"><i class="fas fa-code"></i>API Security</div>
+      <div class="roadmap-domain"><i class="fas fa-search"></i>Digital Forensics</div>
+      <div class="roadmap-domain"><i class="fas fa-bug"></i>Bug Bounty</div>
+      <div class="roadmap-domain"><i class="fas fa-cloud"></i>Cloud Security</div>
+    </div>
+    <!-- Replace with your GitHub link -->
+    <a href="YOUR_GITHUB_ROADMAP_LINK_HERE" target="_blank" class="btn btn-solid" style="gap:10px;">
+      <i class="fab fa-github"></i> Open roadmap on GitHub
+    </a>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     BLOG
+════════════════════════════════════════ -->
+<div class="page" id="page-blogs">
+  <div class="page-top">
+    <span class="section-label">Blog</span>
+    <h1 class="page-title">Writeups &amp; guides</h1>
+    <p class="page-sub">Technical writeups, CTF solutions, tool guides, and security research from the SkillDroid team.</p>
+  </div>
+
+  <section>
+    <div class="blogs-inner">
+      <div class="blogs-grid">
+
+        <div class="blog-card reveal">
+          <span class="blog-tag">Web Security</span>
+          <h3 class="blog-title">OWASP Top 10 — A practical walkthrough for beginners</h3>
+          <p class="blog-excerpt">What the OWASP Top 10 actually means with working examples, not just definitions. Covers injection, broken auth, IDOR, and more.</p>
+          <span class="blog-soon">Coming soon</span>
+        </div>
+
+        <div class="blog-card reveal">
+          <span class="blog-tag">Bug Bounty</span>
+          <h3 class="blog-title">How I found a $5000 SSRF on a production application</h3>
+          <p class="blog-excerpt">Step-by-step walkthrough of finding and reporting a Server-Side Request Forgery vulnerability — recon, discovery, proof of concept, report.</p>
+          <span class="blog-soon">Coming soon</span>
+        </div>
+
+        <div class="blog-card reveal">
+          <span class="blog-tag">Forensics</span>
+          <h3 class="blog-title">Memory forensics with Volatility 3 — from zero</h3>
+          <p class="blog-excerpt">How to extract passwords, find malicious processes, and analyze network connections from a memory dump using Volatility 3.</p>
+          <span class="blog-soon">Coming soon</span>
+        </div>
+
+        <div class="blog-card reveal">
+          <span class="blog-tag">Active Directory</span>
+          <h3 class="blog-title">Active Directory attacks — Kerberoasting to Domain Admin</h3>
+          <p class="blog-excerpt">Covers the full AD attack chain: enumeration with BloodHound, Kerberoasting, Pass-the-Hash, and privilege escalation paths.</p>
+          <span class="blog-soon">Coming soon</span>
+        </div>
+
+        <div class="blog-card reveal">
+          <span class="blog-tag">SOC</span>
+          <h3 class="blog-title">What the SOC analyst job actually looks like</h3>
+          <p class="blog-excerpt">An honest breakdown of L1/L2 SOC work — tools, alert volume, triage process, shift realities, and what skills actually matter.</p>
+          <span class="blog-soon">Coming soon</span>
+        </div>
+
+        <div class="blog-card reveal">
+          <span class="blog-tag">API Security</span>
+          <h3 class="blog-title">API hacking — BOLA, BFLA, and broken auth in practice</h3>
+          <p class="blog-excerpt">The most common API vulnerabilities demonstrated with real request/response examples using Burp Suite and Postman.</p>
+          <span class="blog-soon">Coming soon</span>
+        </div>
+
+      </div>
+      <div class="blogs-more">More posts dropping soon</div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     PORTFOLIO
+════════════════════════════════════════ -->
+<div class="page" id="page-portfolio">
+  <div class="page-top">
+    <span class="section-label">Portfolio</span>
+    <h1 class="page-title">About the founder</h1>
+  </div>
+
+  <section>
+    <div class="portfolio-inner">
+
+      <div class="portfolio-bio-block">
+        <div class="portfolio-avatar">👨‍💻</div>
+        <div>
+          <div class="portfolio-name">Your Name Here</div>
+          <div class="portfolio-role">Cybersecurity Professional · Founder, SkillDroid.in</div>
+          <p class="portfolio-bio">
+            Security practitioner with experience in penetration testing, red teaming, and digital forensics.
+            Founded SkillDroid.in to build a structured, hands-on cybersecurity learning path for students
+            who want to work in the field — not just watch videos about it.
+            Bug bounty hunter, CTF player, and occasional security researcher.
+          </p>
+        </div>
+      </div>
+
+      <div class="skills-block reveal">
+        <div class="skills-block-title">Offensive Security</div>
+        <div class="skill-chips">
+          <div class="skill-chip"><i class="fas fa-terminal"></i>Penetration Testing</div>
+          <div class="skill-chip"><i class="fas fa-globe"></i>Web App Hacking</div>
+          <div class="skill-chip"><i class="fas fa-network-wired"></i>Network Exploitation</div>
+          <div class="skill-chip"><i class="fas fa-code"></i>API Security Testing</div>
+          <div class="skill-chip"><i class="fas fa-wifi"></i>Wireless Attacks</div>
+          <div class="skill-chip"><i class="fas fa-server"></i>Active Directory</div>
+          <div class="skill-chip"><i class="fas fa-bug"></i>Bug Bounty</div>
+          <div class="skill-chip"><i class="fas fa-mobile-alt"></i>Mobile Pentesting</div>
+        </div>
+      </div>
+
+      <div class="skills-block reveal">
+        <div class="skills-block-title">Defensive / Blue Team</div>
+        <div class="skill-chips">
+          <div class="skill-chip"><i class="fas fa-eye"></i>SOC Operations</div>
+          <div class="skill-chip"><i class="fas fa-shield-alt"></i>Incident Response</div>
+          <div class="skill-chip"><i class="fas fa-search"></i>Digital Forensics</div>
+          <div class="skill-chip"><i class="fas fa-virus"></i>Malware Analysis</div>
+          <div class="skill-chip"><i class="fas fa-file-alt"></i>Log Analysis</div>
+          <div class="skill-chip"><i class="fas fa-chart-line"></i>SIEM — Splunk / ELK</div>
+          <div class="skill-chip"><i class="fas fa-lock"></i>Threat Intelligence</div>
+        </div>
+      </div>
+
+      <div class="skills-block reveal">
+        <div class="skills-block-title">Tools</div>
+        <div class="skill-chips">
+          <div class="skill-chip"><i class="fas fa-spider"></i>Burp Suite</div>
+          <div class="skill-chip"><i class="fas fa-terminal"></i>Metasploit</div>
+          <div class="skill-chip"><i class="fas fa-search-plus"></i>Nmap / Masscan</div>
+          <div class="skill-chip"><i class="fas fa-code-branch"></i>Wireshark</div>
+          <div class="skill-chip"><i class="fab fa-linux"></i>Kali Linux</div>
+          <div class="skill-chip"><i class="fas fa-cloud"></i>AWS Security</div>
+          <div class="skill-chip"><i class="fab fa-docker"></i>Docker</div>
+          <div class="skill-chip"><i class="fab fa-github"></i>Git</div>
+        </div>
+      </div>
+
+      <div class="skills-block reveal">
+        <div class="skills-block-title">Programming &amp; Languages</div>
+        <div class="skill-chips">
+          <div class="skill-chip"><i class="fas fa-copyright"></i>C</div>
+          <div class="skill-chip"><i class="fas fa-plus"></i>C++</div>
+          <div class="skill-chip"><i class="fab fa-python"></i>Python</div>
+          <div class="skill-chip"><i class="fab fa-html5"></i>HTML</div>
+          <div class="skill-chip"><i class="fab fa-css3-alt"></i>CSS</div>
+          <div class="skill-chip"><i class="fab fa-js"></i>JavaScript</div>
+          <div class="skill-chip"><i class="fas fa-database"></i>SQL</div>
+          <div class="skill-chip"><i class="fab fa-react"></i>React.js</div>
+        </div>
+      </div>
+
+      <div class="skills-block reveal">
+        <div class="skills-block-title">Certifications</div>
+        <div class="certs-grid">
+          <div class="cert-card"><span class="cert-icon">🏆</span><span class="cert-name">CEH — Certified Ethical Hacker</span></div>
+          <div class="cert-card"><span class="cert-icon">🎯</span><span class="cert-name">OSCP — In Progress</span></div>
+          <div class="cert-card"><span class="cert-icon">🛡️</span><span class="cert-name">CompTIA Security+</span></div>
+          <div class="cert-card"><span class="cert-icon">🔍</span><span class="cert-name">eJPT — eLearnSecurity</span></div>
+          <div class="cert-card"><span class="cert-icon">🌐</span><span class="cert-name">Bug Bounty Hunter</span></div>
+          <div class="cert-card"><span class="cert-icon">🚩</span><span class="cert-name">CTF Competitor</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-top">
+    <span class="section-label">Contact</span>
+    <h1 class="page-title">Get in touch</h1>
+    <p class="page-sub">Questions about a course, pricing, or batch dates — reach out directly. We respond within 24 hours.</p>
+  </div>
+
+  <section>
+    <div class="contact-inner">
+
+      <div class="reveal">
+        <h2 class="contact-heading">Direct contact</h2>
+        <p class="contact-sub">Fastest response is via WhatsApp. You can also email or DM on Instagram.</p>
+        <div class="contact-list">
+          <div class="contact-row">
+            <div class="contact-row-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <div class="contact-row-label">WhatsApp</div>
+              <div class="contact-row-value">+91 YOUR NUMBER HERE</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-row-label">Email</div>
+              <div class="contact-row-value">contact@skilldroid.in</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon"><i class="fab fa-instagram"></i></div>
+            <div>
+              <div class="contact-row-label">Instagram — Main</div>
+              <div class="contact-row-value">@cyber_specterz &nbsp;·&nbsp; 43K</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon"><i class="fab fa-instagram"></i></div>
+            <div>
+              <div class="contact-row-label">Instagram — Academy</div>
+              <div class="contact-row-value">@skilldroid.in</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon"><i class="fab fa-instagram"></i></div>
+            <div>
+              <div class="contact-row-label">Instagram — Personal</div>
+              <div class="contact-row-value">@c1ph3r_volt</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" placeholder="Your name"/></div>
+        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="your@email.com"/></div>
+        <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" placeholder="+91 98765 43210"/></div>
+        <div class="form-group">
+          <label class="form-label">Course interest</label>
+          <select class="form-select form-input">
+            <option value="">Select a course</option>
+            <option>Ethical Hacking Masterclass</option>
+            <option>Web Application Pentesting</option>
+            <option>Network Pentesting</option>
+            <option>SOC Analyst Training</option>
+            <option>API Pentesting</option>
+            <option>Digital Forensics</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="What would you like to know?"></textarea></div>
+        <button class="form-submit" onclick="handleContactSubmit()">Send message</button>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" onclick="showPage('home')">
+          <img src="assets/logo.png" alt="SkillDroid.in"/>
+          <span class="footer-logo-text">Skill<span>Droid</span>.in</span>
+        </a>
+        <p class="footer-tagline">Cybersecurity training focused on practical, hands-on skill building.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/cyber_specterz" target="_blank" class="social-btn" title="@cyber_specterz"><i class="fab fa-instagram"></i></a>
+          <a href="https://instagram.com/skilldroid.in" target="_blank" class="social-btn" title="@skilldroid.in"><i class="fab fa-instagram"></i></a>
+          <a href="https://instagram.com/c1ph3r_volt" target="_blank" class="social-btn" title="@c1ph3r_volt"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Courses</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('courses')">Ethical Hacking</a></li>
+          <li><a onclick="showPage('courses')">Web Pentesting</a></li>
+          <li><a onclick="showPage('courses')">Network Pentesting</a></li>
+          <li><a onclick="showPage('courses')">SOC Analyst</a></li>
+          <li><a onclick="showPage('courses')">API Pentesting</a></li>
+          <li><a onclick="showPage('courses')">Digital Forensics</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Pages</div>
+        <ul class="footer-links">
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('blogs')">Blog</a></li>
+          <li><a onclick="showPage('roadmap')">Roadmap</a></li>
+          <li><a onclick="showPage('portfolio')">Portfolio</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="#">contact@skilldroid.in</a></li>
+          <li><a href="#">+91 YOUR NUMBER</a></li>
+          <li><a href="https://instagram.com/cyber_specterz" target="_blank">@cyber_specterz</a></li>
+          <li><a href="https://instagram.com/skilldroid.in" target="_blank">@skilldroid.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 <span>SkillDroid.in</span>. All rights reserved.</span>
+      <span class="footer-copy">Made in India 🇮🇳</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cursor.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
