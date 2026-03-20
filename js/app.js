@@ -65,7 +65,7 @@ function handleContactSubmit() {
   const select = document.querySelector('.contact-inner .form-select');
   const course = select?.value || 'your courses';
   const msg = encodeURIComponent(`Hi, I'm ${name}. I'm interested in: ${course}.`);
-  window.open(`https://wa.me/91YOURNUMBERHERE?text=${msg}`, '_blank');
+  window.open(`https://wa.me/916305847394?text=${msg}`, '_blank');
 }
 
 // Boot
